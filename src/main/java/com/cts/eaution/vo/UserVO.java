@@ -1,7 +1,9 @@
 package com.cts.eaution.vo;
 
+import java.io.Serializable;
 import java.util.Date;
 
+import javax.validation.Valid;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -10,12 +12,13 @@ import javax.validation.constraints.Size;
  * @author aadi
  *User object
  */
-public class UserVO {
+public class UserVO implements Serializable{
 	private Long id;
 	@NotNull(message="{validation.sso.user.email.notnull}")
 	@Email
 	private String email;
 	private String password;
+	@Valid
 	private UserDetailVO userDetails;
 	private Role role;
 	private Date createdDate;
