@@ -12,9 +12,16 @@ public class BidVO {
 	private Long bidId;
 	private BigDecimal biddingAmount;
 	private Long productId;
-	private Long userID;
+	private String buyerEmailID;
 	private Date bidCreatedDate;
 	private Boolean isBidActive;
+	
+	public String getBuyerEmailID() {
+		return buyerEmailID;
+	}
+	public void setBuyerEmailID(String buyerEmailID) {
+		this.buyerEmailID = buyerEmailID;
+	}
 	
 	public Long getBidId() {
 		return bidId;
@@ -34,12 +41,7 @@ public class BidVO {
 	public void setProductId(Long productId) {
 		this.productId = productId;
 	}
-	public Long getUserID() {
-		return userID;
-	}
-	public void setUserID(Long userID) {
-		this.userID = userID;
-	}
+
 	public Date getBidCreatedDate() {
 		return bidCreatedDate;
 	}
